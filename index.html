@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Sego.bet</title>
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Sego.bet Logo" class="logo">
+        <button class="admin-btn">.</button>
+    </header>
+    <login>
+        <div class="login-container">
+            <h1>Welcome to Sego.bet</h1>
+            <p>You'll get $1000 to gamble with. Each spin costs $100.</p><input type="text" placeholder="Enter your name" class="name-input">
+            <button class="start-btn">Start Playing</button>
+        </div>
+    </login>
+    <gameover>
+        <div class="login-container">
+            <h1>Thanks for playing Sego.bet</h1>
+        </div>
+    </gameover>
+    <main>
+        <div class="player-section">
+            <div class="left-panel">
+                <p class="name">Dan</p>
+                <p class="balance">$1000</p>
+            </div>
+            <div class="right-panel">
+                <p class="bets">0 bets</p>
+                <p class="wins">0 wins</p>
+                <p class="profit">+0</p>
+            </div>
+        </div>
+        <div class="betting-section">
+            <h1>Pick a color to spin.</h1>
+
+            <div class="roulette">
+                <div class="ball red-ball"></div>
+                <div class="ball black-ball"></div>
+
+                <p class="result-text"></p>
+            </div>
+
+            <div class="betting-options">
+                <button class="bet-btn red-btn" data-bet="red">Red</button>
+                <button class="bet-btn black-btn" data-bet="black">Black</button>
+            </div><div class="bottom-area">
+                <p class="timer">time left: 1:30</p>
+                <button class="leave-btn">leave</button>
+            </div>
+        </div>
+    </main>
+    <admin>
+        <h1>Class Dashboard</h1>
+        <div class="stats-panel">
+            <div class="stat stat-players">
+                <p class="stat-tile">Players</p>
+                <p class="stat-value">0</p>
+            </div>
+            <div class="stat stat-total-bets">
+                <p class="stat-tile">Total Bets</p>
+                <p class="stat-value">0</p>
+            </div>
+            <div class="stat stat-class-losses">
+                <p class="stat-tile">Class Losses</p>
+                <p class="stat-value">$0</p>
+            </div>
+            <div class="stat stat-average-balance">
+                <p class="stat-tile">Average Balance</p>
+                <p class="stat-value">$0</p>
+            </div>
+        </div>
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Balance</th>
+                    <th>Profit</th>
+                    <th>Bets</th>
+                    <th>Wins</th>
+                </tr>
+            </thead>
+            <tbody id="resultsBody">
+                <tr>
+                    <td>Dan</td>
+                    <td>$1000</td>
+                    <td>$0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </admin>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="script.js"></script>
+</body></html>
