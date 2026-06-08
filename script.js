@@ -57,7 +57,7 @@ let wins = 0;
 let profit = 0;
 
 let gameActive = false;
-let timeLeft = 90; // 3 minutes
+let timeLeft = 180;
 
 // ======================
 // INITIAL STATE
@@ -307,7 +307,7 @@ function spin(playerChoice){
     redBall.classList.add("bouncing");
     blackBall.classList.add("bouncing");
 
-    const win = Math.random() < 0.30;
+    const win = Math.random() < 0.40;
 
     let resultColor;
 
@@ -437,7 +437,7 @@ leaveBtn.addEventListener("click", () => {
     // Update UI
     updateUI();
 
-    timerText.textContent = "time left: 1:30";
+    timerText.textContent = "time left: 3:00";
 
     gameoverPage.style.display = "block";
     mainPage.style.display = "none";
